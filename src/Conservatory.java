@@ -21,14 +21,15 @@ public class Conservatory {
         // TODO: remove "aviary" from "aviaries"
     }
 
-    public Bird lookUpBirdInAviary() {
-
+    public Aviary lookUpBirdInAviary(Bird bird) {
+        // TODO: check which Aviary "bird" is in
     }
 
     public int printIndex() {
 
     }
 
+    // TODO: sign, map functions
     public int getAviaryCount() {
         return aviaryCount;
     }
