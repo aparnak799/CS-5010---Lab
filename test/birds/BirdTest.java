@@ -11,7 +11,21 @@ public class BirdTest {
 
     @Test
     public void test() {
-        Bird w = new Shorebird("Raghu", 234, false, 12, true, "Salt Lake");
+        Conservatory c = new Conservatory();
+
+        Bird eagle = new BirdOfPrey("Eagle", 2, false);
+        Bird eagle1 = new BirdOfPrey("Eagle", 2, false);
+        Bird parrot = new Parrot("Titli", 2, false, new ArrayList<>(Arrays.asList("Hello", "Bro")),"Bro");
+
+        c.rescueBird(eagle);
+        c.rescueBird(eagle1);
+        c.rescueBird(eagle1);
+        c.rescueBird(eagle1);
+        c.rescueBird(eagle1);
+        c.rescueBird(eagle1);
+        c.rescueBird(parrot);
+
+        assertEquals(1, c.getAviaries().get(1).getBirdPopulation());
     }
 
 //    @Test
