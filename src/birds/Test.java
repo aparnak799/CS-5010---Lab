@@ -20,7 +20,7 @@ public class Test {
         c.rescueBird(shoreBird);
 
 //        System.out.println(c.lookUpBirdInAviary("Eagle"));
-        System.out.println(c.printMap());
+        System.out.println(c.printIndex());
     }
 
 }
