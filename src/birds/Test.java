@@ -19,6 +19,8 @@ public class Test {
         c.rescueBird(eagle1);
         c.rescueBird(shoreBird);
 
-        System.out.println(c.lookUpBirdInAviary("Eagle"));
+//        System.out.println(c.lookUpBirdInAviary("Eagle"));
+        System.out.println(c.printMap());
     }
+
 }

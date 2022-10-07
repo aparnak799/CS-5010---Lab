@@ -212,13 +212,13 @@ Bird(id=5, type=SHOREBIRD, name=Gurren, noOfWings=0, isExtinct=false, preferredF
         c.rescueBird(shoreBird);
 
         assertEquals("""
-                Location: Los Angeles
-                	Bird(id=4, type=PARROT, name=Titli1, noOfWings=2, isExtinct=false, preferredFoods=[fruit, insect, nuts], characteristics=[short, curved beak, intelligence, mimicry], vocabulary=[Hello, Bro], favouritePhrase=Bro)
-                	Bird(id=3, type=PARROT, name=Titli, noOfWings=2, isExtinct=false, preferredFoods=[fruit, insect, nuts], characteristics=[short, curved beak, intelligence, mimicry], vocabulary=[Hello, Bro], favouritePhrase=Bro)
-                	Bird(id=5, type=SHOREBIRD, name=Gurren, noOfWings=0, isExtinct=false, preferredFoods=[fish, aquatic invertebrates], characteristics=[live near water], isNearWaterbody=true, waterbody=Salt lake)
-                Location: San Diego
-                	Bird(id=1, type=BIRD_OF_PREY, name=Eagle, noOfWings=2, isExtinct=false, preferredFoods=[small mammals], characteristics=[sharp, hooked beaks, visible nostrils])
-                	Bird(id=2, type=BIRD_OF_PREY, name=Eagle, noOfWings=2, isExtinct=false, preferredFoods=[small mammals], characteristics=[sharp, hooked beaks, visible nostrils])
+Location: Los Angeles
+	Bird(id=4, type=PARROT, name=Titli1, noOfWings=2, isExtinct=false, preferredFoods=[fruit, insect, nuts], characteristics=[short, curved beak, intelligence, mimicry], vocabulary=[Hello, Bro], favouritePhrase=Bro)
+	Bird(id=3, type=PARROT, name=Titli, noOfWings=2, isExtinct=false, preferredFoods=[fruit, insect, nuts], characteristics=[short, curved beak, intelligence, mimicry], vocabulary=[Hello, Bro], favouritePhrase=Bro)
+	Bird(id=5, type=SHOREBIRD, name=Gurren, noOfWings=0, isExtinct=false, preferredFoods=[fish, aquatic invertebrates], characteristics=[live near water], isNearWaterbody=true, waterbody=Salt lake)
+Location: San Diego
+	Bird(id=1, type=BIRD_OF_PREY, name=Eagle, noOfWings=2, isExtinct=false, preferredFoods=[small mammals], characteristics=[sharp, hooked beaks, visible nostrils])
+	Bird(id=2, type=BIRD_OF_PREY, name=Eagle, noOfWings=2, isExtinct=false, preferredFoods=[small mammals], characteristics=[sharp, hooked beaks, visible nostrils])
                 """, c.printMap());
 
     }
