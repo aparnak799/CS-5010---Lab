@@ -1,10 +1,22 @@
+package birds;
+
+import java.util.ArrayList;
+
 public class Aviary {
 
-    protected int birdPopulation; // this can just be population, not population count
-    protected String description;
-    protected Bird[] birds = new Bird[5]; // TODO: add test to check size
-    protected int aviaryId;
-    protected String location;
+    private static int count = 0;
+    private int aviaryId;
+    private int birdPopulation; // this can just be population, not population count
+    private String description;
+    private ArrayList<Bird> birds = new ArrayList<Bird>(); // TODO: add test to check size
+    private String location;
+
+    public Aviary(String location) {
+        this.aviaryId = ++count;
+        this.birdPopulation = 0;
+        this.description = "";
+        this.location = location;
+    }
 
     public void insertBird(Bird bird) {
         // TODO: Add "bird" to "birds";

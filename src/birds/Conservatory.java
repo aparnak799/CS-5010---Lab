@@ -1,9 +1,15 @@
+package birds;
+
+import java.util.ArrayList;
+
 public class Conservatory {
 
-    protected int aviaryCount;
-    protected float foodRequired;
-    protected Aviary[] aviaries = new Aviary[20]; // TODO: add test to check size
-    protected int conservatoryId;
+    private static int count = 0;
+    private int aviaryCount;
+    private float foodRequired;
+
+    private ArrayList<Aviary> aviaries = new ArrayList<Aviary>(); // TODO: add test to check size
+    private int conservatoryId;
 
     public void calculateFoodRequired() {
         // TODO: calculate value of foodRequired
@@ -22,11 +28,12 @@ public class Conservatory {
     }
 
     public Aviary lookUpBirdInAviary(Bird bird) {
-        // TODO: check which Aviary "bird" is in
+        // TODO: check which birds.Aviary "bird" is in
+        return new Aviary("Behjnd my house");
     }
 
     public int printIndex() {
-
+return 0;
     }
 
     // TODO: sign, map functions

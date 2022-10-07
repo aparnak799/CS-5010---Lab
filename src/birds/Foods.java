@@ -1,4 +1,6 @@
-public enum Food {
+package birds;
+
+public enum Foods {
     BERRIES("berries"),
     SEEDS("seeds"),
     FRUIT("fruit"),
@@ -14,7 +16,7 @@ public enum Food {
 
     private final String food;
 
-    Food(final String food) {
+    Foods(final String food) {
         this.food = food;
     }
 
