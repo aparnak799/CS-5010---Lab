@@ -1,5 +1,8 @@
 package birds;
 
+/**
+ * Enum to handle all possible foods that the birds eat
+ */
 public enum Foods {
     BERRIES("berries"),
     SEEDS("seeds"),

@@ -1,5 +1,8 @@
 package birds;
 
+/**
+ * Enum to handle all types of characteristics
+ */
 public enum Characteristics {
     SHARP_HOOKED("sharp, hooked beaks"),
     VISIBLE_NOSTRILS("visible nostrils"),

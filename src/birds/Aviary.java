@@ -2,35 +2,59 @@ package birds;
 
 import java.util.ArrayList;
 
+/**
+ * Class represents an Aviary as described in the problem statement
+ */
 public class Aviary {
 
     private static int count = 0;
     private int aviaryId;
     private int birdPopulation;
-    private String description;
     private ArrayList<Bird> birds = new ArrayList<Bird>();
+    private String location;
 
+    /**
+     * Constructor for Aviary class
+     * Takes in location and sets default value to rest of the attributes
+     * @param location
+     */
+    public Aviary(String location) {
+        this.aviaryId = ++count;
+        this.birdPopulation = 0;
+        this.location = location;
+    }
+
+    /**
+     *
+     * @return list of all birds in the aviary
+     */
     public ArrayList<Bird> getBirds() {
         return birds;
     }
 
-    private String location;
-
-    public Aviary(String location) {
-        this.aviaryId = ++count;
-        this.birdPopulation = 0;
-        this.description = "";
-        this.location = location;
-    }
-
+    /**
+     * Increments or decrements the Bird Population Count for this Aviary
+     * @param birdPopulation
+     */
     public void setBirdPopulation(int birdPopulation) {
         this.birdPopulation = birdPopulation;
     }
 
+    /**
+     * Sets a Bird Array to the birds member variable
+     * @param birds
+     */
     public void setBirds(ArrayList<Bird> birds) {
         this.birds = birds;
     }
 
+    /**
+     * Method to take in a bird and insert into Aviary
+     * if conditions are not met, returns false
+     * else returns true
+     * @param bird
+     * @return boolean
+     */
     public boolean insertBird(Bird bird) {
         if(this.birdPopulation >= 5) return false;
         if(bird.isExtinct()) return false;
@@ -54,34 +78,42 @@ public class Aviary {
         setBirdPopulation(birds.size());
         return true;
     }
+
+    /**
+     * @return the total number of Birds in the Aviary
+     */
     public int getBirdPopulation() {
         return birdPopulation;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
+    /**
+     *
+     * @return the unique ID of aviary
+     */
     public int getAviaryId() {
         return aviaryId;
     }
 
-    public void setAviaryId(int aviaryId) {
-        this.aviaryId = aviaryId;
-    }
 
+    /**
+     * @return location of Aviary
+     */
     public String getLocation() {
         return location;
     }
 
+    /**
+     * Method to set or update the location of an aviary
+     * @param location
+     */
     public void setLocation(String location) {
         this.location = location;
     }
 
+    /**
+     *
+     * @return a sign for any given aviary that gives a description of the birds it houses and any interesting information that it may have about that animal.
+     */
     public String printAviarySign(){
         String returnString = String.format("Location: %s\n", getLocation());
         if(birdPopulation == 0) return returnString + "There are no birds in this aviary.";

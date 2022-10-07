@@ -4,17 +4,21 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
+/**
+ * Class to represent Conservatory as mentioned in the Problem Statement
+ */
 public class Conservatory {
 
     private static int count = 0;
     private int conservatoryId;
     private int aviaryCount;
-    public ArrayList<Aviary> getAviaries() {
-        return aviaries;
-    }
 
     private ArrayList<Aviary> aviaries = new ArrayList<Aviary>(); // TODO: add test to check size
 
+    /**
+     * Constructor for creating a Conservatory
+     * Currently creates 20 aviaries in different locations
+     */
     public Conservatory() {
         this.conservatoryId = ++count;
         this.aviaryCount = 0;
@@ -28,6 +32,18 @@ public class Conservatory {
         }
     }
 
+    /**
+     *
+     * @return list of all aviaries
+     */
+    public ArrayList<Aviary> getAviaries() {
+        return aviaries;
+    }
+
+    /**
+     *
+     * @return the food required by all the birds in the conservatory
+     */
     public int calculateFoodRequired() {
         int foodRequired = 0;
         for (Aviary a: getAviaries()){
@@ -40,6 +56,10 @@ public class Conservatory {
         return foodRequired;
     }
 
+    /**
+     * "Rescue" and add a bird to any one of the aviaries
+     * @param bird
+     */
     public void rescueBird(Bird bird) {
         if(bird.isExtinct()) throw new IllegalArgumentException("Bird cannot be extinct");
         int i = 0;
@@ -54,18 +74,29 @@ public class Conservatory {
         if(!successfullyRescued) throw new IllegalStateException("All aviaries are at capacity");
     }
 
+    /**
+     * Adds aviary to conservatory
+     * @param aviary
+     */
     public void addAviary(Aviary aviary) {
         if(aviaries.size() >= 20) throw new IllegalStateException("Each Conservatory can only have upto 20 Aviaries");
         this.aviaries.add(aviary);
         this.aviaryCount += 1;
     }
 
+    /**
+     * Removes aviary from conservatory
+     * @param idx
+     */
     public void removeAviary(int idx) {
         if(aviaries.size() == 0) throw new IllegalStateException("A Conservatory has to have atleast one aviary to remove");
         aviaries.remove(idx);
         this.aviaryCount -= 1;
     }
 
+    /**
+     * @return a map of all the Aviaries by location and all the birds inside the aviary
+     */
     public String printMap() {
        String map = "";
        for (Aviary a: aviaries) {
@@ -79,6 +110,12 @@ public class Conservatory {
        return map;
     }
 
+
+    /**
+     * method to return which aviary a specific bird is in
+     * @param birdName
+     * @return Aviary in which bird is in
+     */
     public Aviary lookUpBirdInAviary(String birdName) {
         for(Aviary a: aviaries) {
              if(a.getBirdPopulation() > 0 ){
@@ -90,6 +127,9 @@ public class Conservatory {
         return null;
     }
 
+    /**
+     * @return an index of Birds sorted in alphabetical order (by names)  and also lists location along with it
+     */
     public String printIndex() {
         ArrayList<BirdLocPair> allBirds = new ArrayList<BirdLocPair>();
         for (Aviary a: aviaries){
@@ -111,18 +151,36 @@ public class Conservatory {
         return returnString;
     }
 
+    /**
+     *
+     * @return no of aviaries in the conservatory
+     */
     public int getAviaryCount() {
         return aviaryCount;
     }
 
+    /**
+     *
+     * increment/decrement the aviaryCount
+     * @param aviaryCount
+     */
     public void setAviaryCount(int aviaryCount) {
         this.aviaryCount = aviaryCount;
     }
 
+    /**
+     *
+     * @return id of conservatory
+     */
     public int getConservatoryId() {
         return conservatoryId;
     }
 
+    /**
+     *
+     * Sets the id of the conservatory
+     * @param conservatoryId
+     */
     public void setConservatoryId(int conservatoryId) {
         this.conservatoryId = conservatoryId;
     }
