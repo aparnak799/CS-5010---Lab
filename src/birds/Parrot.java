@@ -27,7 +27,9 @@ public class Parrot extends Bird{
     public Parrot(String birdName, int noOfWings, boolean extinct, ArrayList<Characteristics> characteristics, ArrayList<Foods> preferredFoods, int foodRequired, ArrayList<String> vocabulary, String favoritePhrase) {
         super(Birds.PARROT, birdName, noOfWings, extinct, characteristics, preferredFoods, foodRequired);
         this.vocabulary = vocabulary;
-        this.favoritePhrase = favoritePhrase;
+        if(vocabulary.contains(favoritePhrase))
+            this.favoritePhrase = favoritePhrase;
+        else throw new IllegalArgumentException("Favorite Phrase should be a part of parrot's vocabulary");
     }
 
     /**

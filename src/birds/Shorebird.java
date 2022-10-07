@@ -12,11 +12,10 @@ public class Shorebird extends WaterBird {
      * @param noOfWings
      * @param extinct
      * @param foodRequired
-     * @param isNearWaterBody
      * @param waterbody
      */
-    public Shorebird(String birdName, int noOfWings, boolean extinct,  int foodRequired, boolean isNearWaterBody, String waterbody) {
-        super(Birds.SHOREBIRD, birdName, noOfWings, extinct, foodRequired, isNearWaterBody, waterbody);
+    public Shorebird(String birdName, int noOfWings, boolean extinct,  int foodRequired, String waterbody) {
+        super(Birds.SHOREBIRD, birdName, noOfWings, extinct, foodRequired, waterbody);
     }
 
     /**
@@ -25,11 +24,10 @@ public class Shorebird extends WaterBird {
      * @param birdName
      * @param noOfWings
      * @param extinct
-     * @param isNearWaterBody
      * @param waterbody
      */
-    public Shorebird(String birdName, int noOfWings, boolean extinct, boolean isNearWaterBody, String waterbody) {
-        this(birdName, noOfWings, extinct, 2, isNearWaterBody, waterbody);
+    public Shorebird(String birdName, int noOfWings, boolean extinct, String waterbody) {
+        this(birdName, noOfWings, extinct, 2,  waterbody);
     }
 
 }

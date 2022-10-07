@@ -17,12 +17,11 @@ public abstract class WaterBird extends Bird{
      * @param noOfWings
      * @param extinct
      * @param foodRequired
-     * @param isNearWaterBody
      * @param waterbody
      */
-    public WaterBird(Birds birdType, String birdName, int noOfWings, boolean extinct,  int foodRequired, boolean isNearWaterBody, String waterbody) {
+    public WaterBird(Birds birdType, String birdName, int noOfWings, boolean extinct,  int foodRequired, String waterbody) {
         super(birdType, birdName, noOfWings, extinct, new ArrayList<Characteristics>(Arrays.asList(Characteristics.LIVE_NEAR_WATER)), new ArrayList<Foods>(Arrays.asList(Foods.FISH, Foods.AQUATIC_INVERTEBRATES)), foodRequired);
-        this.isNearWaterBody = isNearWaterBody;
+        this.isNearWaterBody = true;
         this.waterbody = waterbody;
     }
 
